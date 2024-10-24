@@ -21,8 +21,8 @@ msg.attach(MIMEText(body, 'plain'))
 
 # Conexión con el servidor SMTP de Outlook
 try:
-    server = smtplib.SMTP('smtp-mail.outlook.com', 587)
-    server.starttls()  # Iniciar la encriptación TLS
+    server = smtplib.SMTP('smtp-mail.outlook.com', 465)
+    server.starttls()  # Iniciar TLS
     server.login(sender_email, password)  # Iniciar sesión en tu cuenta de Outlook
 
     # Enviar el correo
